@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "How many of these did I write...?",
     "Some more placeholder text",
     "Running out of ideas here",
-    "Custard Creams are the best biscuit."
+    "Custard Creams are the best biscuit.",
+    "Louise suggested this one"
   ]
 
   const textElement = document.querySelector("#text-display");
@@ -25,5 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   xhr.addEventListener("load", reqListener);
   xhr.open("GET", "http://localhost:5000/api");
   xhr.send();
+
+  textButton.addEventListener("click", () => {
+    const newPhrase = getRandomPhrase();
+    textElement.innerText = newPhrase;
+  });
 
 });
