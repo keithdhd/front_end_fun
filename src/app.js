@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     "Custard Creams are the best biscuit."
   ]
 
+  const textElement = document.querySelector("#text-display");
+  const textButton = document.querySelector("#text-button");
+
   function getRandomPhrase() {
     return phrases[Math.floor(Math.random() * phrases.length)];
   }
